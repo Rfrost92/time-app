@@ -1,0 +1,45 @@
+<div>
+  <p>Current Time: {{ currentTime }}</p>
+  <button (click)="refreshData()">Refresh</button>
+  <button (click)="toggleAutomaticUpdate()">
+    {{ automaticUpdateEnabled ? 'Disable Automatic Update' : 'Enable Automatic Update (Every 60 sec)' }}
+  </button>
+
+  <div class="main">
+  <div *ngIf="products.length > 0">
+    <h2>Total Products: {{ products.length }}</h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Category</th>
+        <th>Count</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let category of categoryCounts | keyvalue">
+        <td>{{ category.key }}</td>
+        <td>{{ category.value }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="appleProducts.length > 0">
+    <h2>Apple Products</h2>
+    <div class="apple-products">
+      <div *ngFor="let product of appleProducts" class="product-card">
+        <img [src]="product.thumbnail" alt="{{ product.title }}">
+        <div class="product-info">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <div class="price_rating">
+          <p class="price">Price: ${{ product.price }}</p>
+          <p class="rating">Rating: {{ product.rating }}</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

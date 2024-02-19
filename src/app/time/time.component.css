@@ -1,0 +1,73 @@
+.product-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-family: monospace;
+}
+
+.product-card p {
+  margin: 5px 0;
+}
+
+.product-card .price {
+  font-weight: bold;
+}
+
+.product-card .rating {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.apple-products {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.price_rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
